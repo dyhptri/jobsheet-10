@@ -28,7 +28,13 @@ public class BioskopWithScanner07modif {
                     int kolom = input.nextInt();
                     input.nextLine();
 
+                    if (baris <= 0 || baris > 4 && kolom <= 0 || kolom > 2 ) {
+                        System.out.println("Maaf kursi tidak tersedia");
+                        System.out.println("Mohon masukkan baris antara (1-4)");
+                        continue;
+                    } else {
                     penonton[baris - 1][kolom - 1] = nama;
+                    }
 
                     System.out.print("Input penonton lainnya? (y/n): ");
                     String next = input.nextLine();
@@ -48,6 +54,8 @@ public class BioskopWithScanner07modif {
             } else if (pilih == 3) {
                 System.out.println("Program selesai");
                 break;
+            } else {
+                System.out.println("Mohon masukkan input yang valid");
             }
         }
     }
