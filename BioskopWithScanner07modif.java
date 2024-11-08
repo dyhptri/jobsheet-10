@@ -52,6 +52,11 @@ public class BioskopWithScanner07modif {
                     for (int j = 0; j < penonton[i].length; j++) {
                         String namaPenonton = penonton[i][j];
                         System.out.println("Baris ke- " + (i + 1) + " kolom ke- " + (j + 1) + ": " + namaPenonton);
+                        if (namaPenonton == null) {
+                            System.out.print("***");
+                        } else {
+                            System.out.print(namaPenonton);
+                        }
                     }
                 }
             } else if (pilih == 3) {
